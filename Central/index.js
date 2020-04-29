@@ -7,7 +7,7 @@ app.use(cors())
 // 034ea3f51a6c4d78825bac979347d9c5
 // ?apiKey=YOUR-API-KEY
 
-app.get('/quiz', async function( req, res){
+app.get('/foodquiz', async function( req, res){
 
     console.log(req.query)
     axios.get(`https://api.spoonacular.com/recipes/findByIngredients?ingredients=${req.query.ingrediente}&apiKey=034ea3f51a6c4d78825bac979347d9c5`)

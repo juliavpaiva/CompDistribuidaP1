@@ -11,11 +11,11 @@ app.use(bodyparser.urlencoded({
   extended: true
 }))
 
-app.post('/foodquiz', async function( req, res){
+app.post('/quiz', async function( req, res){
 
 
     console.log(req.body) 
-    axios.get(`http://localhost:3333/quiz`,{params: {ingrediente: req.body.pergunta}})
+    axios.get(`http://localhost:3333/foodquiz`,{params: {ingrediente: req.body.pergunta}})
     .then((response)=>{
         res.send(`<h1>${response.data.nome}</h1><br><img src="${response.data.imagem}">`)
     })
